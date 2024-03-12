@@ -1,1 +1,1 @@
-# svelt playground
+# svelte playground

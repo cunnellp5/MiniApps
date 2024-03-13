@@ -11,5 +11,5 @@
   - [x] Add todo to list when submitted
   - [x] Show todos in a list on page
   - [x] Click a todo to mark it as done
-  - [ ] Delete button for todo
-  - [ ] Watch todos for changes and save to localStorage
+  - [x] Delete button for todo
+  - [x] Watch todos for changes and save to localStorage

@@ -2,6 +2,7 @@
   <a class="hover-line" href="/">Home</a>
   <a class="hover-line" href="/scores">Scores</a>
   <a class="hover-line" href="/posts">Posts</a>
+  <a class="hover-line" href="/todo">Todos</a>
 </nav>
 
 <main>
@@ -11,10 +12,8 @@
 
 <style>
   main {
-      padding: 1rem;
-      margin: 1rem;
+    margin: 0 4rem;
   }
-
 
   nav {
     position: relative;

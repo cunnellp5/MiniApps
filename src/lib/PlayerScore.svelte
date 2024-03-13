@@ -15,21 +15,16 @@
 </script>
 
 <div>
-    <h2>{ playerName }</h2>
-    <p>{ playerScore }</p>
-    <button on:click={incrementPlayerScore}>Up</button>
-    <button on:click={decreasePlayerScore} disabled={playerScore === 0}>Down</button>
+    <h2>
+        { playerName }:
+        { playerScore }
+    </h2>
+    <button on:click={incrementPlayerScore}>⬆️</button>
+    <button on:click={decreasePlayerScore} disabled={playerScore === 0}>⬇️</button>
 </div>
 
 <style>
-    div {
-        padding: 1rem;
-        margin: 1rem;
-    }
     h2 {
-        margin: 0;
-    }
-    p {
         margin: 0;
     }
     button {

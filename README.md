@@ -5,6 +5,11 @@
   - [x] Add button to decrement state
   - [x] Reset state from parent
   - [x] Turn into componenet
+  - [ ] Refactor so we can add players to an array
+  - [ ] Delete players
+  - [ ] Clear all players
+  - [ ] Reset individual scores / keep reset all
+  - [ ] Use grid system so its responsive
 - TODO app
   - [x] Add todo route
   - [x] Form to add todo

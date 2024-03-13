@@ -30,9 +30,13 @@
         todos = todos;
     }
 
+    function deleteAllTodos() {
+        todos = [];
+    };
+
     $: if (typeof window !== 'undefined') {
         localStorage.setItem('todos', JSON.stringify(todos));
-    }
+    };
 </script>
 
 <main>
@@ -56,12 +60,33 @@
                 </li>
             {/each}
         </ul>
+        {#if todos.length === 0}
+            <p>No todos</p>
+        {/if}
+        <button class="removeAll" class:hidden={todos.length < 3} on:click={deleteAllTodos}>Delete All</button>
     </div>
 </main>
 
 <style>
     ul {
         padding: 0;
+    }
+    .removeAll {
+        box-sizing: border-box;
+        appearance: none;
+        background-color: transparent;
+        border: 2px solid rgb(255, 85, 85);
+        color: rgb(255, 85, 85);
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    }
+    .removeAll:hover {
+        box-shadow: 0 0 40px 40px rgb(255, 85, 85) inset;
+        color: white;
+    }
+    .hidden {
+        display: none;
     }
     .todosWrapper {
         margin: 0 2rem;

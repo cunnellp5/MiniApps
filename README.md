@@ -6,10 +6,10 @@
   - [x] Reset state from parent
   - [x] Turn into componenet
 - TODO app
-  - [ ] Add todo route
-  - [ ] Form to add todo
-  - [ ] Add todo to list when submitted
-  - [ ] Show todos in a list on page
-  - [ ] Click a todo to mark it as done
+  - [x] Add todo route
+  - [x] Form to add todo
+  - [x] Add todo to list when submitted
+  - [x] Show todos in a list on page
+  - [x] Click a todo to mark it as done
   - [ ] Delete button for todo
   - [ ] Watch todos for changes and save to localStorage

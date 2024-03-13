@@ -18,7 +18,6 @@
     <h2>
         { playerName.toUpperCase() }:
         <span class="playerScore">
-            <!-- <small>score:</small> -->
             { playerScore }
         </span>
     </h2>
@@ -46,7 +45,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.08);
         padding: 1rem;
         margin: 1rem 0;

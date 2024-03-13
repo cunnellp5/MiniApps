@@ -1,15 +1,16 @@
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<!-- svelte-ignore a11y-click-events-have-key-events -->
 <script>
     import TodoForm from "$lib/TodoForm.svelte";
 
     /** @type {{ title: string; done: boolean; }[]} **/
     let todos = [];
     if (typeof window !== 'undefined') {
-        todos = localStorage.getItem('todos') 
+        todos = localStorage.getItem('todos')
             // @ts-ignore
             ? JSON.parse(localStorage.getItem('todos'))
             : [];
     }
-
 
     /** @param {string} todo **/
     function addTodo(todo) {
@@ -29,7 +30,6 @@
         todos = todos;
     }
 
-    
     $: if (typeof window !== 'undefined') {
         localStorage.setItem('todos', JSON.stringify(todos));
     }
@@ -37,29 +37,22 @@
 
 <main>
     <h1>Todo</h1>
-    
     <div class="todosWrapper">
         <TodoForm addTodo={addTodo}/>
-        
         <ul>
-            <!-- svelte-ignore a11y-no-static-element-interactions -->
             {#each todos as { title, done }, i}
                 <li class="todo" class:done={done}>
-                    <!-- <div class="deleteWrapper"> -->
-                    {#if done}
-                        <span>✅</span>
-                    {/if}
-                    <!-- svelte-ignore a11y-click-events-have-key-events -->
-                    <span on:click={() => done = !done}>
-                        {title}
-                    </span>
-                    <!-- svelte-ignore a11y-click-events-have-key-events -->
-                    <span 
-                        class="delete" 
+                    <input
+                        checked={done}
+                        type="checkbox"
+                        on:click={() => done = !done}
+                    />
+                    <label for="todo">{title}</label>
+                    <span
+                        class="delete"
                         on:click={() => removeTodos(i)}>
                         🗑️
                     </span>
-                    <!-- </div> -->
                 </li>
             {/each}
         </ul>
@@ -67,11 +60,9 @@
 </main>
 
 <style>
-    /* .deleteWrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    } */
+    ul {
+        padding: 0;
+    }
     .todosWrapper {
         margin: 0 2rem;
         width: 360px;
@@ -81,11 +72,12 @@
     }
     .todo {
         cursor: pointer;
+        list-style-type: none;
     }
     .delete {
         display: inline-block;
     }
     .delete:hover {
-        transform: scale(2);
+        transform: scale(1.2);
     }
 </style>

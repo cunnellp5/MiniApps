@@ -15,6 +15,12 @@
             todos = todos;
         }
     }
+
+    /** @param {number} index **/
+    function removeTodos(index) {
+        todos.splice(index, 1);
+        todos = todos;
+    }
 </script>
 
 <main>
@@ -24,11 +30,24 @@
         <TodoForm addTodo={addTodo}/>
         
         <ul>
-            {#each todos as { title, done }}
-                <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-                <!-- svelte-ignore a11y-click-events-have-key-events -->
-                <li class:done={done} on:click={() => done = !done}>
-                    {title}
+            <!-- svelte-ignore a11y-no-static-element-interactions -->
+            {#each todos as { title, done }, i}
+                <li class="todo" class:done={done}>
+                    {#if done}
+                        <span>✅</span>
+                    {/if}
+                    <div class="deleteWrapper">
+                        <!-- svelte-ignore a11y-click-events-have-key-events -->
+                        <span on:click={() => done = !done}>
+                            {title}
+                        </span>
+                        <!-- svelte-ignore a11y-click-events-have-key-events -->
+                        <span 
+                            class="delete" 
+                            on:click={() => removeTodos(i)}>
+                            🗑️
+                        </span>
+                    </div>
                 </li>
             {/each}
         </ul>
@@ -36,10 +55,25 @@
 </main>
 
 <style>
+    .deleteWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     .todosWrapper {
         margin: 0 2rem;
+        width: 360px;
     }
     .done{
-        text-decoration: line-through;   
+        text-decoration: line-through;
+    }
+    .todo {
+        cursor: pointer;
+    }
+    .delete {
+        display: inline-block;
+    }
+    .delete:hover {
+        transform: scale(2);
     }
 </style>

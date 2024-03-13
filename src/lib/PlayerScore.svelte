@@ -1,8 +1,7 @@
 <script>
     /** @type {string} **/
-     export let playerName;
-
-    let playerScore = 0;
+    export let playerName;
+    export let playerScore = 0;
 
     function incrementPlayerScore() {
         playerScore += 1;
@@ -12,11 +11,7 @@
         if(playerScore > 0) {
             playerScore -= 1;
         }
-    };
-    
-    export function resetScore() {
-        playerScore = 0;
-    };
+    };    
 </script>
 
 <div>

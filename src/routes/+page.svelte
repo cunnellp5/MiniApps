@@ -1,15 +1,15 @@
 <script>
     import PlayerScore from "$lib/PlayerScore.svelte";
 
-    /** @type {PlayerScore} **/
+    /** @type {Number} **/
     let player1Score;
 
-    /** @type {PlayerScore} **/
+    /** @type {Number} **/
     let player2Score;
 
     function resetScore() {
-        player1Score.resetScore();
-        player2Score.resetScore();
+        player1Score = 0;
+        player2Score = 0;
     }
 </script>
 
@@ -17,8 +17,8 @@
     <h1>Home page</h1>
 
     <h2>Player Score Counter:</h2>
-    <PlayerScore bind:this={player1Score} playerName="Player 1"></PlayerScore>
-    <PlayerScore bind:this={player2Score} playerName="Player 2"></PlayerScore>
+    <PlayerScore bind:playerScore={player1Score} playerName="Player 1"></PlayerScore>
+    <PlayerScore bind:playerScore={player2Score} playerName="Player 2"></PlayerScore>
 
     <button on:click={resetScore}>Reset</button>
 </main>

@@ -9,7 +9,7 @@
     <p>
         This is a playground to learn svelte. Also here's a rotating cube made with three.js
     </p>
-    <Cube></Cube>
+    <!-- <Cube></Cube> -->
 </main>
 
 <style></style>

@@ -1,6 +1,7 @@
 import { error } from "@sveltejs/kit";
 import { posts } from "$lib/data/posts";
 
-export function load({ params }) {
+/** @type {import('./$types').PageLoad} */
+export async function load({ params }) {
   return { posts };
 }

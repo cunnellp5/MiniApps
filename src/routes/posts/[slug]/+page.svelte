@@ -1,10 +1,22 @@
 <script>
     export let data;
+    console.log(data, 'wtffff')
 </script>
 
-<h1>Posts</h1>
-{#each data.posts as post (post.slug)}
-    <h2>
-        <a href={`/posts/${post.slug}`}>{post.title}</a>
-    </h2>
-{/each}
+<div>
+    <h1>{data.title}</h1>
+    &nbsp;
+    <h4>[{data.slug}]</h4>
+</div>
+<p>{data.content}</p>
+
+<style>
+    div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    p {
+       white-space: pre-line; 
+    }
+</style>

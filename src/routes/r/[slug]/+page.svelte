@@ -1,10 +1,12 @@
 <script>
+    import { page } from '$app/stores';
+
 	/** @type {import('./$types').PageData} */
 	export let data;
 </script>
 
 <h1>
-    r/
+    r/{$page.params.slug}
 </h1>
 
 {#each data.posts as post}

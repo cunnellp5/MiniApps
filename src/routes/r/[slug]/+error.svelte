@@ -1,5 +1,9 @@
 <script>
-    import { error } from '@sveltejs/kit';
-    
-    error(404, 'Uh Oh, not found');
+    // @ts-nocheck
+	import { page } from '$app/stores';
 </script>
+
+<h1>Reddit</h1>
+<h2>{$page.status}: {$page.error.message}</h2>
+
+<a href="/r">Search again...</a>

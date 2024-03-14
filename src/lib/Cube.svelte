@@ -1,5 +1,5 @@
 <script>
-        import { onMount, onDestroy } from 'svelte';
+    import { onMount, onDestroy } from 'svelte';
     import * as THREE from 'three';
 
     let color1Hex = '#cf9259';
@@ -21,34 +21,36 @@
     let color2 = new THREE.Color(color2Hex);
 
     onMount(() => {
-        scene = new THREE.Scene();
-        camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 0.1, 1000 );
-        renderer = new THREE.WebGLRenderer();
-        renderer.setClearColor(0xffffff);
-        renderer.setSize( window.innerWidth, window.innerHeight );
-        document.body.appendChild( renderer.domElement );
-
-        group = new THREE.Group(); // Create a group
-
-        // Create 8 smaller cubes and add them to the group
-        for (let x = -0.5; x <= 0.5; x += 1) {
-            for (let y = -0.5; y <= 0.5; y += .2) {
-                for (let z = -0.1; z <= 0.1; z += .8) {
-                    geometry = new THREE.BoxGeometry( 0.5, 0.5, 0.5 );
-                    material = new THREE.MeshStandardMaterial( { color: 0x00fff0 } );
-                    let cube = new THREE.Mesh( geometry, material );
-                    cube.position.set(x, y, z);
-                    group.add( cube );
+        if (typeof window !== 'undefined') {
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 0.1, 1000 );
+            renderer = new THREE.WebGLRenderer();
+            renderer.setClearColor(0xffffff);
+            renderer.setSize( window.innerWidth, window.innerHeight );
+            document.body.appendChild( renderer.domElement );
+    
+            group = new THREE.Group(); // Create a group
+    
+            // Create 8 smaller cubes and add them to the group
+            for (let x = -0.5; x <= 0.5; x += 1) {
+                for (let y = -0.5; y <= 0.5; y += .2) {
+                    for (let z = -0.1; z <= 0.1; z += .8) {
+                        geometry = new THREE.BoxGeometry( 0.5, 0.5, 0.5 );
+                        material = new THREE.MeshStandardMaterial( { color: 0x00fff0 } );
+                        let cube = new THREE.Mesh( geometry, material );
+                        cube.position.set(x, y, z);
+                        group.add( cube );
+                    }
                 }
             }
+            scene.add( group );
+            light = new THREE.PointLight(0xffffff, 50, 100);
+            light.position.set(0, 0, 10);
+            scene.add(light);
+            camera.position.z = 4;
+            window.addEventListener('resize', onWindowResize);
+            animate();
         }
-        scene.add( group );
-        light = new THREE.PointLight(0xffffff, 50, 100);
-        light.position.set(0, 0, 10);
-        scene.add(light);
-        camera.position.z = 4;
-        window.addEventListener('resize', onWindowResize);
-        animate();
     });
 
     function animate() {
@@ -74,7 +76,9 @@
     }
 
     onDestroy(() => {
-        window.removeEventListener('resize', onWindowResize);
+        if (typeof window !== 'undefined') {
+            window.removeEventListener('resize', onWindowResize);
+        }
     });
 
     function updateColors() {

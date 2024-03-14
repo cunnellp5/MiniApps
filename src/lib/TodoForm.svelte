@@ -11,7 +11,7 @@
 </script>
 
 <form on:submit|preventDefault={formSubmitted}>
-    <label for="">
+    <label>
         <input 
             bind:value={newTodo} 
             placeholder="Enter a todo..."

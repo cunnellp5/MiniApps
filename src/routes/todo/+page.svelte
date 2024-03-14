@@ -19,7 +19,6 @@
                 title: todo,
                 done: false
             })
-            console.log(todos);
             todos = todos;
         }
     }

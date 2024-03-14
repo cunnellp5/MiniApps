@@ -3,6 +3,7 @@
   <a class="hover-line" href="/scores">Scores</a>
   <a class="hover-line" href="/posts">Posts</a>
   <a class="hover-line" href="/todo">Todos</a>
+  <a class="hover-line" href="/r">Reddit</a>
 </nav>
 
 <main>
@@ -17,8 +18,6 @@
 
   nav {
     position: relative;
-    /* margin: 270px auto 0; */
-    /* width: 520px; */
     height: 50px;
     background-color: #6e6e6e;
     font-size: 0;

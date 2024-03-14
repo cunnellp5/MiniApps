@@ -20,9 +20,9 @@
   - [x] Watch todos for changes and save to localStorage
   - [x] implement check boxes instead of check emoji
 - Reddit client
-  - [ ] fetch posts from reddit
+  - [x] fetch posts from reddit
   - [ ] add posts to page
-    - [ ] make it look medium
+    - [x] make it look medium
   - [ ] add favorite button to post
   - [ ] add favorites page to show favoirtes
   - [ ] save favorites to localStorage

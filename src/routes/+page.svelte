@@ -1,5 +1,5 @@
 <script>
-    import Cube from '../lib/Cube.svelte';
+    // import Cube from '../lib/Cube.svelte';
 </script>
 
 <main>
@@ -7,7 +7,7 @@
 
     <h3>Description:</h3>
     <p>
-        This is a playground to learn svelte. Also here's a rotating cube made with three.js
+        This is a playground to learn svelte.
     </p>
     <!-- <Cube></Cube> -->
 </main>

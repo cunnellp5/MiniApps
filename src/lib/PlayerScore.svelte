@@ -15,12 +15,12 @@
 </script>
 
 <main class="scores">
-    <h2>
+    <h3>
         { playerName.toUpperCase() }:
         <span class="playerScore">
             { playerScore }
         </span>
-    </h2>
+    </h3>
     <div class=incrementors>
         <button on:click={incrementPlayerScore}>⬆️</button>
         <button on:click={decreasePlayerScore} disabled={playerScore === 0}>⬇️</button>
@@ -28,7 +28,7 @@
 </main>
 
 <style>
-    h2 {
+    h3 {
         margin: 0;
     }
 

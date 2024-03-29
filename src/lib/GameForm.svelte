@@ -1,5 +1,5 @@
 <script lang='ts'>
-  export let addGame;
+  export let addGame: (game: any) => void;
 
   type Player = { name: string, score: number };
 

@@ -5,11 +5,11 @@
   - [x] Add button to decrement state
   - [x] Reset state from parent
   - [x] Turn into componenet
-  - [ ] Refactor so we can add players to an array
-  - [ ] Delete players
-  - [ ] Clear all players
-  - [ ] Reset individual scores / keep reset all
-  - [ ] Use grid system so its responsive
+  - [x] Refactor so we can add players to an array
+  - [x] Delete players
+  - [x] Clear all players
+  - [x] Reset individual scores / keep reset all
+  - [x] Use grid system so its responsive
 - TODO app
   - [x] Add todo route
   - [x] Form to add todo
@@ -21,7 +21,7 @@
   - [x] implement check boxes instead of check emoji
 - Reddit client
   - [x] fetch posts from reddit
-  - [ ] add posts to page
+  - [x] add posts to page
     - [x] make it look medium
   - [ ] add favorite button to post
   - [ ] add favorites page to show favoirtes

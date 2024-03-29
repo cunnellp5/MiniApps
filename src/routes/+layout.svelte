@@ -10,6 +10,9 @@
   <slot />
 </main>
 
+<footer>
+  <a class="footer-link hover-line" href="https://philcunnell.dev">philcunnell.dev</a>
+</footer>
 
 <style>
   .center-nav {
@@ -64,5 +67,24 @@
   .hover-line:hover::after{
     width: 100%;
     transition: width .34s;
+  }
+
+  .footer-link {
+    color: white;
+    text-decoration: none;
+  }
+
+  .footer-link:hover {
+    color: #449f97;
+  }
+
+  footer {
+    display: flex;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 1rem;
+    text-align: center;
+    background-color: #6e6e6e;
+    color: white;
   }
 </style>

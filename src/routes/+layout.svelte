@@ -1,4 +1,4 @@
-<nav>
+<nav class="center-nav">
   <a class="hover-line" href="/">Home</a>
   <a class="hover-line" href="/scores">Scores</a>
   <a class="hover-line" href="/posts">Posts</a>
@@ -6,14 +6,24 @@
   <a class="hover-line" href="/r">Reddit</a>
 </nav>
 
-<main>
+<main class="center-main">
   <slot />
 </main>
 
 
 <style>
-  main {
-    margin: 0 4rem;
+  .center-nav {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 1rem;
+  }
+
+  .center-main {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
   nav {
@@ -21,11 +31,13 @@
     height: 50px;
     background-color: #6e6e6e;
     font-size: 0;
-    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
 
   nav a{
-    font-size: 15px;
+    font-size: 16px;
     color: white;
     text-transform: uppercase;
     text-decoration: none;
@@ -33,9 +45,6 @@
     z-index: 1;
     display: inline-block;
     text-align: center;
-    padding: 0 20px;
-    line-height: 50px;
-    
   }
 
   nav a:hover{

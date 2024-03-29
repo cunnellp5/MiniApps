@@ -48,7 +48,7 @@
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.08);
         padding: 1rem;
         margin: 1rem 0;
-        width: 20%;
+        width: 40%;
     }
 
     .incrementors{

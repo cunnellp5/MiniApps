@@ -1,5 +1,3 @@
-import { error } from "@sveltejs/kit";
-
 /** @type {import('./$types').PageLoad} **/
 export async function load({ fetch, params }: { fetch: any; params: string }) {
   const url = `https://api.reddit.com/r/${params.slug}.json`;

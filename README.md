@@ -4,9 +4,9 @@
 
 ## Links
 
-📓 [posts](https://minis.philcunnell.dev/posts)
-🗞️ [redditClone](https://minis.philcunnell.dev/r)
-🏓 [score keeper](https://minis.philcunnell.dev/scores)
+📓 [posts](https://minis.philcunnell.dev/posts)<br>
+🗞️ [redditClone](https://minis.philcunnell.dev/r)<br>
+🏓 [score keeper](https://minis.philcunnell.dev/scores)<br>
 📝 [todos](https://minis.philcunnell.dev/todos)
 
 ---

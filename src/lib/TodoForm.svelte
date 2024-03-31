@@ -4,7 +4,6 @@
     let newTodo = '';
 
     function formSubmitted() {
-        console.log('form submitted')
         addTodo(newTodo);
         newTodo = '';
     }

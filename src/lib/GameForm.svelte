@@ -8,7 +8,6 @@
   let playerCount: number = 0;
 
   function formSubmit() {
-    console.log("game created");
     addGame({ gameName, players })
 
     gameName = '';

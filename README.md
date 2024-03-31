@@ -1,29 +1,25 @@
-# svelte playground
+# MiniApps
 
-- Score keeper
-  - [x] Add button to increment state
-  - [x] Add button to decrement state
-  - [x] Reset state from parent
-  - [x] Turn into componenet
-  - [x] Refactor so we can add players to an array
-  - [x] Delete players
-  - [x] Clear all players
-  - [x] Reset individual scores / keep reset all
-  - [x] Use grid system so its responsive
-- TODO app
-  - [x] Add todo route
-  - [x] Form to add todo
-  - [x] Add todo to list when submitted
-  - [x] Show todos in a list on page
-  - [x] Click a todo to mark it as done
-  - [x] Delete button for todo
-  - [x] Watch todos for changes and save to localStorage
-  - [x] implement check boxes instead of check emoji
-- Reddit client
-  - [x] fetch posts from reddit
-  - [x] add posts to page
-    - [x] make it look medium
-  - [ ] add favorite button to post
-  - [ ] add favorites page to show favoirtes
-  - [ ] save favorites to localStorage
-  - [ ] load favorites on page load
+[minis.philcunnell.dev](https://minis.philcunnell.dev)
+
+## Links
+
+📓 [posts](https://minis.philcunnell.dev/posts)
+🗞️ [redditClone](https://minis.philcunnell.dev/r)
+🏓 [score keeper](https://minis.philcunnell.dev/scores)
+📝 [todos](https://minis.philcunnell.dev/todos)
+
+---
+
+## Tech Stack
+
+- sveltekit (TS)
+- JS/TS
+- CSS/HTML
+
+## Development
+
+1. `$ git clone git@github.com:cunnellp5/MiniApps.git`
+2. `$ cd MiniApps`
+3. `$ npm i`
+4. `$ npm run dev`

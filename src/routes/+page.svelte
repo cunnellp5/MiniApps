@@ -12,7 +12,7 @@
             <h3>
                 Scores
             </h3>
-            <pre>A place to keep track of player scores and games</pre>
+            <pre>A place to keep track of games that tracks player scores (uses localStorage)</pre>
         </li>
         <li>
             <h3>
@@ -24,13 +24,13 @@
             <h3>
                 Todos
             </h3>
-            <pre>List of todos that are saved to localStorage</pre>
+            <pre>List of todos. Items saved to localStorage</pre>
         </li>
         <li>
             <h3>
-                Reddit
+                Reddit clone
             </h3>
-            <pre>Reaches out to the reddit api and renders the page that is searched by appending the search term to the url query param, has two examples</pre>
+            <pre>Uses Reddit API to agregate items for a given reddit page</pre>
         </li>
     </ul>
 </main>

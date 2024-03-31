@@ -3,11 +3,11 @@
 </script>
 
 <div>
-    <h1>{data.title}</h1>
+    <h1>{data?.title}</h1>
     &nbsp;
-    <h4>[{data.slug}]</h4>
+    <h4>[{data?.slug}]</h4>
 </div>
-<p>{data.content}</p>
+<p>{data?.content}</p>
 
 <style>
     div {

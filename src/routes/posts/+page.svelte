@@ -4,9 +4,9 @@
 
 <h1>Posts</h1>
 
-{#each data.posts as post}
+{#each data?.posts as post}
     <li>
-        &nbsp;<a href={`/posts/${post.slug}`}>{post.title}</a>
+        &nbsp;<a href={`/posts/${post?.slug}`}>{post?.title}</a>
     </li>
 {/each}
 

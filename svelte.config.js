@@ -10,6 +10,13 @@ const config = {
     paths: {
       base: process.env.NODE_ENV === "production" ? "" : "",
     },
+    prerender: {
+      handleHttpError: (error, request) => {
+        if (error.status === 500) {
+          return { status: 500, body: "Internal server error" };
+        }
+      },
+    },
   },
 };
 

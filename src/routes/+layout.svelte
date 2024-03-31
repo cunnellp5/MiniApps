@@ -1,9 +1,13 @@
+<script lang="ts">
+  import { base } from '$app/paths';
+</script>
+
 <nav class="center-nav">
-  <a class="hover-line" href="/">Home</a>
-  <a class="hover-line" href="/scores">Scores</a>
-  <a class="hover-line" href="/posts">Posts</a>
-  <a class="hover-line" href="/todo">Todos</a>
-  <a class="hover-line" href="/r">Reddit</a>
+  <a class="hover-line" href="{base}/">Home</a>
+  <a class="hover-line" href="{base}/scores">Scores</a>
+  <a class="hover-line" href="{base}/posts">Posts</a>
+  <a class="hover-line" href="{base}/todo">Todos</a>
+  <a class="hover-line" href="{base}/r">Reddit</a>
 </nav>
 
 <main class="center-main">

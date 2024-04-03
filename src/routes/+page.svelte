@@ -14,6 +14,8 @@
         <button on:click={() => signIn()}>Sign in</button>
     {/if}
 
+    <button on:click={() => signOut()}>Sign out</button>
+
     <h1>
         A playground to learn.
     </h1>

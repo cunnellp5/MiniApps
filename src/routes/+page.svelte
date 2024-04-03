@@ -1,20 +1,20 @@
 <script lang="ts">
     import { signIn, signOut } from '@auth/sveltekit/client'
     import { page } from '$app/stores'
+
+    let imgSrc: string = $page?.data?.session?.user?.image ?? 'https://cdn.pixabay.com/photo/2017/08/11/19/36/vw-2632486_1280.png';
 </script>
 
 <main>
 
     {#if $page.data.session?.user}
+        <img class="avatar" alt="avatar" src={imgSrc} />
         <p>Signed in as {$page.data.session.user.email}</p>
         <button on:click={() => signOut()}>Sign out</button>
-        <!-- <img src="https://cdn.pixabay.com/photo/2017/08/11/19/36/vw-2632486_1280.png" /> -->
     {:else}
         <p>Not signed in.</p>
         <button on:click={() => signIn()}>Sign in</button>
     {/if}
-
-    <button on:click={() => signOut()}>Sign out</button>
 
     <h1>
         A playground to learn.
@@ -59,5 +59,11 @@
 
     pre {
         white-space: pre-wrap;
+    }
+
+    .avatar {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
     }
 </style>

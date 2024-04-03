@@ -68,7 +68,7 @@
 
 
 {#each games as game, i}
-    <div class=gameWrapper>
+    <div class="gameWrapper gameWrapper-{i}">
         <h2>Game {game.gameName}</h2>
         {#each game.players as player}
             <PlayerScore 
@@ -116,8 +116,33 @@
         text-transform: uppercase;
         transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
     }
+
     .removeAll:hover {
         box-shadow: 0 0 40px 40px rgb(255, 85, 85) inset;
         color: white;
+    }
+
+    .gameWrapper-0 {
+        background: rgb(231, 255, 248);
+    }
+
+    .gameWrapper-1 {
+        background: rgb(231, 249, 255);
+    }
+
+    .gameWrapper-2 {
+        background: rgb(231, 239, 255);
+    }
+
+    .gameWrapper-3 {
+        background: rgb(245, 231, 255);
+    }
+
+    .gameWrapper-4 {
+        background: rgb(255, 231, 241);
+    }
+
+    .gameWrapper-5 {
+        background: rgb(255, 231, 231);
     }
 </style>

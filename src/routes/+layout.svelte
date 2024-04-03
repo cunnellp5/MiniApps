@@ -1,15 +1,41 @@
 <script lang="ts">
   import { base } from '$app/paths';
+  import { page } from '$app/stores'
 </script>
 
 <nav class="center-nav">
-  <a class="hover-line" href="{base}/">Home</a>
-  <a class="hover-line" href="{base}/scores">Scores</a>
-  <a class="hover-line" href="{base}/posts">Posts</a>
-  <a class="hover-line" href="{base}/todo">Todos</a>
-  <a class="hover-line" href="{base}/r">Reddit</a>
+  <a 
+    class="hover-line" 
+    class:active="{$page.url.pathname.endsWith(`/`)}" 
+    href="{base}/">
+    Home
+  </a>
+  <a 
+    class="hover-line"
+    class:active="{$page.url.pathname.endsWith(`/scores`)}"
+    href="{base}/scores">
+    Scores
+  </a>
+  <a 
+    class="hover-line"
+    class:active="{$page.url.pathname.endsWith(`/posts`)}"
+    href="{base}/posts">
+    Posts
+  </a>
+  <a 
+    class="hover-line"
+    class:active="{$page.url.pathname.endsWith(`/todo`)}"
+    href="{base}/todo">
+    Todos
+  </a>
+  <a 
+    class="hover-line"
+    class:active="{$page.url.pathname.endsWith(`/reddit`)}"
+    href="{base}/r">
+    Reddit
+  </a>
 </nav>
-
+  
 <main class="center-main">
   <slot />
 </main>
@@ -80,6 +106,21 @@
 
   .footer-link:hover {
     color: #449f97;
+  }
+
+  a.active {
+    color: #449f97;
+  }
+  a.active::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #449f97;
+    transition: all .6s ease 0s;
+    transition: width .3;
+    width: 100%;
+    transition: width .34s;
   }
 
   footer {

@@ -132,4 +132,16 @@
     background-color: #6e6e6e;
     color: white;
   }
+
+  @media (max-width: 800px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+      height: auto;
+    }
+
+    nav a {
+      margin: 0.5rem 0;
+    }
+  }
 </style>

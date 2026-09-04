@@ -6,18 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Philip Cunnell - Software Engineer</title>
     <style>
-        /* --- Base Page Styles --- */
         body {
             background-color: #f8fafc;
             color: #1e293b;
             font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
             line-height: 1.75;
-            /* Increased leading for optimal text tracking */
             margin: 0;
             padding: 40px 20px;
         }
 
-        /* Container to center and coordinate sidebar layout */
         .container {
             max-width: 960px;
             margin: 0 auto;
@@ -25,39 +22,12 @@
             gap: 40px;
         }
 
-        /* --- Layout Columns --- */
-        .sidebar {
-            width: 160px;
-            position: sticky;
-            top: 40px;
-            height: fit-content;
-        }
-
         .main-content {
             flex: 1;
             max-width: 720px;
-            /* Forces optimal 75-character max line width */
         }
 
-        /* Clean Sidebar Jump Links */
-        .nav-link {
-            display: block;
-            color: #64748b;
-            text-decoration: none;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 12px;
-            font-weight: bold;
-            transition: color 0.15s ease;
-        }
-
-        .nav-link:hover {
-            color: #0f172a;
-        }
-
-        /* Main Sheet Container */
-        .resume-card {
+        .card {
             background: #ffffff;
             padding: 40px;
             border-radius: 12px;
@@ -65,127 +35,10 @@
             border: 1px solid #e2e8f0;
         }
 
-        /* Styling Hyperlinks inside Pre text */
-        pre a {
-            color: #0284c7;
-            text-decoration: underline;
-            text-decoration-style: dotted;
-        }
-
-        pre a:hover {
-            color: #0369a1;
-            text-decoration-style: solid;
-        }
-
-        /* --- Section Visual Anchors --- */
-        .resume-section {
-            border-left: 3px solid #e2e8f0;
-            padding-left: 24px;
-            /* Added breathing room from line anchor */
-            margin-bottom: 40px;
-            scroll-margin-top: 40px;
-            /* Targets layout alignment on jump link click */
-        }
-
-        /* Color-coded Sections: Line and Header Matching */
-        .experience {
-            border-left-color: #0284c7;
-        }
-
-        .experience .section-title {
-            color: #0284c7;
-        }
-
-        .achievements {
-            border-left-color: #b45309;
-        }
-
-        .achievements .section-title {
-            color: #b45309;
-        }
-
-        .education {
-            border-left-color: #0f766e;
-        }
-
-        .education .section-title {
-            color: #0f766e;
-        }
-
-        .skills {
-            border-left-color: #6d28d9;
-        }
-
-        .skills .section-title {
-            color: #6d28d9;
-        }
-
-        /* Color-coded Section Titles */
-        .section-title {
-            font-weight: bold;
-            font-size: 15px;
-            letter-spacing: 0.05em;
-            margin-bottom: 16px;
-            text-transform: uppercase;
-        }
-
-        /* --- Experience Subformatting --- */
-        .job-title {
-            color: #0f172a;
-            font-weight: bold;
-            font-size: 14px;
-            display: block;
-            margin-bottom: 2px;
-        }
-
-        .job-date {
-            color: #64748b;
-            font-weight: normal;
-        }
-
-        .tech-line {
-            color: #64748b;
-            font-style: italic;
-            display: inline-block;
-            margin-bottom: 8px;
-        }
-
-        .tech-label {
-            font-weight: bold;
-            font-style: normal;
-            color: #475569;
-        }
-
-        .bullet-point {
-            color: #475569;
-            display: block;
-            padding-left: 14px;
-            margin-bottom: 8px;
-        }
-
-        /* Softens raw bullet icon layer */
-        .bullet-char {
-            color: #cbd5e1;
-            margin-right: 4px;
-            display: inline-block;
-        }
-
-        /* Preformatted Text Configuration */
-        pre {
-            margin: 0;
-            padding: 0;
-            font-family: inherit;
-            font-size: 14px;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            color: #334155;
-        }
-
         html {
             scroll-behavior: smooth;
         }
 
-        /* --- Responsive Media Adjustments --- */
         @media (max-width: 768px) {
             body {
                 padding: 20px 12px;
@@ -196,21 +49,7 @@
                 gap: 24px;
             }
 
-            .sidebar {
-                position: static;
-                width: auto;
-                display: flex;
-                gap: 16px;
-                flex-wrap: wrap;
-                border-bottom: 1px solid #e2e8f0;
-                padding-bottom: 16px;
-            }
-
-            .nav-link {
-                margin-bottom: 0;
-            }
-
-            .resume-card {
+            .card {
                 padding: 24px;
             }
         }
@@ -219,80 +58,9 @@
 
 <body>
     <div class="container">
-        <!-- Sticky Sidebar Navigation -->
-        <div class="sidebar">
-            <a href="#experience" class="nav-link" style="color: #0284c7;">// Experience</a>
-            <a href="#achievements" class="nav-link" style="color: #b45309;">// Achievements</a>
-            <a href="#education" class="nav-link" style="color: #0f766e;">// Education</a>
-            <a href="#skills" class="nav-link" style="color: #6d28d9;">// Skills</a>
-        </div>
-        <!-- Main Code Body -->
         <div class="main-content">
-            <div class="resume-card">
-
-                <!-- Main Intro Info Header -->
-                <pre style="margin-bottom: 32px;">
-PHILIP CUNNELL
-Software Engineer
-<a href="mailto:philcunnell@gmail.com">philcunnell@gmail.com</a> | 908-812-2395 | Denver, CO
-
-SUMMARY
-Senior Full-Stack Engineer with 9+ years of experience building scalable web applications, modernizing frontend architectures, and optimizing cloud infrastructure. Proven track record across Go, React, Next.js, and TypeScript, leveraging modern AI tooling to drive development velocity. Strong focus on user experience, performance, and cross-functional leadership.</pre>
-
-                <!-- EXPERIENCE SECTION -->
-                <div class="resume-section experience" id="experience">
-                    <div class="section-title">EXPERIENCE</div>
-                    <pre><span class="job-title">Senior Software Developer @ Flowhub <span class="job-date">— Jan 2025 - July 2026</span></span>
-<span class="tech-line"><span class="tech-label">Tech:</span> React, Go, PostgreSQL, Next.js</span>
-<span class="bullet-point"><span class="bullet-char">•</span>Accelerated development velocity by integrating AI-assisted workflows (Claude, Cursor) into feature delivery and automated test generation.</span><span class="bullet-point"><span class="bullet-char">•</span>Built proof-of-concepts, authored technical specifications, architected frontend modernizations, and optimized CI/CD pipelines.</span><span class="bullet-point"><span class="bullet-char">•</span>Collaborated across teams to ship high-impact features for the core e-commerce Next.js repository.</span>
-
-<span class="job-title">Freelance Developer <span class="job-date">— Feb 2024 - Jan 2025</span></span>
-<span class="tech-line"><span class="tech-label">Tech:</span> React, SvelteKit, Prisma, C, TypeScript, JavaScript, Supabase, Vercel</span>
-<span class="bullet-point"><span class="bullet-char">•</span>Engineered full-stack web application architecture, custom media pipelines, and backend integration for <a href="https://theriversings.com" target="_blank">theriversings.com</a> (SvelteKit, PostgreSQL, Cloudinary, Supabase).</span><span class="bullet-point"><span class="bullet-char">•</span>Designed and delivered custom web solutions for small business clients (<a href="https://venusroseaesthetics.com" target="_blank">venusroseaesthetics.com</a>).</span>
-
-<span class="job-title">Full Stack Developer @ AutoPay <span class="job-date">— Jun 2022 - Feb 2024</span></span>
-<span class="tech-line"><span class="tech-label">Tech:</span> React, TypeScript, Vue, Nest.js, Node.js, Retool, AWS</span>
-<span class="bullet-point"><span class="bullet-char">•</span>Rewrote core backend and frontend systems, interfacing with AWS Lambda functions and CloudWatch monitoring.</span><span class="bullet-point"><span class="bullet-char">•</span>Created internal Retool applications, streamlining onboarding processes for non-technical operations teams.</span><span class="bullet-point"><span class="bullet-char">•</span>Refined agile workflows, led daily stand-ups, maintained rigorous testing standards, and conducted code reviews.</span>
-
-<span class="job-title">Software Engineer @ eGauge Systems <span class="job-date">— Jun 2021 - Apr 2022</span></span>
-<span class="tech-line"><span class="tech-label">Tech:</span> Python, JavaScript, jQuery, HTML, CSS, DigitalOcean</span>
-<span class="bullet-point"><span class="bullet-char">•</span>Provisioned DigitalOcean databases for staging environments and deployed automated management processes via Ansible.</span><span class="bullet-point"><span class="bullet-char">•</span>Built full-stack features for payment systems using Stripe, facilitating automated purchase and management of SIM cards.</span><span class="bullet-point"><span class="bullet-char">•</span>Developed interactive geolocation mapping features for distributor locations using Leaflet.js.</span>
-
-<span class="job-title">Software Engineer @ Beatport <span class="job-date">— Dec 2019 - Jun 2021</span></span>
-<span class="tech-line"><span class="tech-label">Tech:</span> React, TypeScript, Python/Django, SCSS, Next.js</span>
-<span class="bullet-point"><span class="bullet-char">•</span>Built RESTful API endpoints in Python/Django and consumed them in React/Next.js frontends with robust test coverage.</span><span class="bullet-point"><span class="bullet-char">•</span>Integrated third-party plugins (HubSpot, Recurly, FB Pixel, Google Analytics, PayPal) across 5 core repositories.</span><span class="bullet-point"><span class="bullet-char">•</span>Assisted in sprint task organization and led retrospective team meetings.</span>
-
-<span class="job-title">UI Developer @ ClickFox (DBA Bryter) <span class="job-date">— Jun 2017 - Dec 2019</span></span>
-<span class="tech-line"><span class="tech-label">Tech:</span> Angular 2+, JavaScript, RxJS</span>
-<span class="bullet-point"><span class="bullet-char">•</span>Developed frontend web applications using Angular 2+ and centralized state management, utilizing Jest and Cypress for automated testing.</span><span class="bullet-point"><span class="bullet-char">•</span>Engineered custom interactive Sankey data visualizations using vanilla JavaScript.</span></pre>
-                </div>
-
-            <!-- ACHIEVEMENTS SECTION -->
-            <div class="resume-section achievements" id="achievements">
-                <div class="section-title">ACHIEVEMENTS</div>
-                <pre>Patent - System and method to discover and quantify principal driving factors or ‘Dominant paths’ in interconnected journey data (3/8/2018 - us 62/640,728)</pre>
-            </div>
-
-                <!-- EDUCATION SECTION -->
-                <div class="resume-section education" id="education">
-                    <div class="section-title">EDUCATION</div>
-                    <pre><span class="job-title">Computer Science CS50 @ Harvard (Online) — Dec 2024</span>
-<span class="job-title">Full Stack Web Development Immersive @ Galvanize — Apr 2017</span>
-<span class="job-title">BA, Geophysics @ University of Colorado, Boulder — 2013</span></pre>
-                </div>
-
-                <!-- SKILLS SECTION -->
-                <div class="resume-section skills" id="skills">
-                    <div class="section-title">SKILLS</div>
-                    <pre><strong>Languages:</strong> JavaScript, TypeScript, Python, Go, C, HTML/CSS
-
-<strong>Frameworks & Libraries:</strong> React, Next.js, Vue, SvelteKit, Angular, Node.js, Express, Nest.js, Django, RxJS
-
-<strong>Databases & Cloud:</strong> PostgreSQL, MySQL, Redis, AWS, Supabase, Firebase, DigitalOcean, Vercel, Heroku, GCP
-
-<strong>Testing & Tools:</strong> Linear, Vitest, Jest, Mocha, Cypress, Selenium, RESTful APIs, GraphQL, Docker, Retool, Git, JIRA</pre>
-                </div>
-
+            <div class="card">
+                under construction
             </div>
         </div>
     </div>

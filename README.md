@@ -1,1 +1,0 @@
-This used to be a sveltekit project with random mini apps, but it looked terrible and was half broken. Until i bring in something neater and more technical, behold.. a resume
